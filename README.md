@@ -20,4 +20,16 @@ server {
 
 ```
 
+## Revrse Proxy Basic
 
+```
+server {
+    listen 80;
+    server_name www.example.com example.com;
+    location /app {
+	proxy_pass http://127.0.0.1:8080;
+	}
+	
+}
+
+```
