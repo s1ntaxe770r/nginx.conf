@@ -1,5 +1,5 @@
 # nginx.conf
-Nginx config files for various use cases.Because i never remember the syntax
+Nginx config files for various use cases. Because I never remember the syntax
 
 
 ## Basic 
@@ -20,7 +20,7 @@ server {
 
 ```
 
-## Revrse Proxy Basic
+## Reverse Proxy Basic
 
 ```
 server {
