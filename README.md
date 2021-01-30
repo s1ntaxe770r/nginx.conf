@@ -33,3 +33,23 @@ server {
 }
 
 ```
+
+## Load Balancer Basic 
+
+```
+http {
+   upstream backends {
+      server 10.1.0.101; 
+      server 10.1.0.102;
+      server 10.1.0.103;
+   }
+
+   
+   server {
+      listen 80; 
+
+      location / {
+          proxy_pass http://backends;
+      }
+   }
+}
