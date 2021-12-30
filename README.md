@@ -34,6 +34,22 @@ server {
 
 ```
 
+## Improved Reverse Proxy 
+
+```
+server {
+        listen 80;
+        server_name uwu.net www.startherepo.net;
+
+        location / {
+            proxy_pass http://your_server_ip:8080;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+```
 ## Load Balancer Basic 
 
 ```
